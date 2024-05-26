@@ -8,7 +8,7 @@ const Home = ({ visits, setVisits }) => {
   useEffect(() => {
     // Increment the visits count each time the Home page is visited
     setVisits(visits + 1);
-  }, []);
+  }, [visits, setVisits]);
 
   return (
     <div className="d-flex flex-column gap-2 ms-3 mt-3">
