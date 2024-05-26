@@ -7,8 +7,10 @@ const Home = ({ visits, setVisits }) => {
   // useEffect hook
   useEffect(() => {
     // Increment the visits count each time the Home page is visited
-    setVisits(visits + 1);
-  }, [visits, setVisits]);
+    setVisits(() => visits + 1);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="d-flex flex-column gap-2 ms-3 mt-3">
